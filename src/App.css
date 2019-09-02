@@ -52,3 +52,10 @@ input {
   overflow: visible;
   margin-top: 22px !important;
 }
+
+.btn-warning {
+  margin-bottom: 6px !important;
+  width: 64px !important;
+  height: 33px !important;
+  padding: 2px !important;
+}

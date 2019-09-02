@@ -49,7 +49,7 @@ class AddItemComponent extends Component<IAddItemComponentProps, IAddItemCompone
     return (
       <div className="App">
        <input type = "text" placeholder = "Enter todo..." onChange ={this.updateInputValueInState} />
-        <button  type ="submit" onClick ={this.handleClick} >Add</button> 
+        <button className="btn btn-warning" type ="submit" onClick ={this.handleClick} >Add</button> 
       </div>
     );
   }
