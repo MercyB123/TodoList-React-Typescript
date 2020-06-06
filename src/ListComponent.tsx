@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import { ImyTodo } from './App';
 
-
  interface IListProps {
   someList: ImyTodo[];
   showComplete(i:number): void;
@@ -12,8 +11,6 @@ class ListComponent extends Component<IListProps, {}> {
 
   constructor(props: any) {
     super(props);
-
-    
   }
 
   handleChange(i: number){
@@ -22,11 +19,9 @@ class ListComponent extends Component<IListProps, {}> {
   }
 
   inputUpdate(){
-    
   }
 
   render() {
-
     let myTodoList: JSX.Element[]  = [];
     
     for(let i = 0; i < this.props.someList.length; i++){
@@ -35,11 +30,8 @@ class ListComponent extends Component<IListProps, {}> {
       <li key ={i} className={this.props.someList[i].complete ? 'done' : ''} onClick={this.handleChange.bind(this, i)}>
         <input type= "checkbox" checked={this.props.someList[i].complete} />
         {this.props.someList[i].todo}
-        </li>))
-       
+        </li>))  
     }
-
-    
 
     return (
       <div className="App">
@@ -52,6 +44,4 @@ class ListComponent extends Component<IListProps, {}> {
     );
   }
   }
-  
-
 export default ListComponent;
