@@ -5,17 +5,13 @@ import AddItemComponent from './AddItemComponent'
 
 
 export interface ImyTodo {
-   
   todo: string; 
   complete: boolean
 } 
 
 interface IAppState {
-  
   myList: ImyTodo[];
 } 
-
-
 
 class App extends Component<{}, IAppState> {
 
@@ -23,20 +19,16 @@ class App extends Component<{}, IAppState> {
     super(props);
 
     this.state ={
-        
         myList: [ 
         {todo: 'Go to the gym', complete: false},
         {todo: 'cook', complete: false},
         {todo: 'study', complete: false}
-      ],
-                 
+      ],           
     }
     
     this.toggle = this.toggle.bind(this)
     this.addItem = this.addItem.bind(this)
   }
-
-
 
   toggle =(i: number)=>{
       let todoList = this.state.myList
@@ -49,20 +41,14 @@ class App extends Component<{}, IAppState> {
       })
   }
 
-
   //input text
   addItem =(newItem: ImyTodo) => {
     this.setState({
       myList: [...this.state.myList, newItem]
-
     })
-
-
   }
 
   render() {
-
-   
     return (
       <div className="App">
         <header className ="App-header">
@@ -73,6 +59,4 @@ class App extends Component<{}, IAppState> {
     );
   }
   }
-  
-
 export default App;
